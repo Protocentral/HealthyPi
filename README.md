@@ -6,7 +6,7 @@ Repository Contents
 * **/extras** - includes the datasheet
 * **/Brainbay** - setup  and configuration file
 
-![Wave Form in Processing](https://github.com/Protocentral/AFE4400_Oximeter/blob/master/Processing/Final%20Output/PPG-Generated.png)
+![Wave Form in Processing](https://github.com/Protocentral/HealthyPi/blob/master/Processing/Final-Output/output.png)
 
 
 License Information
