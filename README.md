@@ -4,7 +4,7 @@ Repository Contents
 * **/Libraries** - Arduino library and example sketches.
 * **/Hardware** - All Eagle design files (.brd, .sch)
 * **/extras** - includes the datasheet
-* **/Brainbay** - setup  and configuration file
+* **/Processing** - setup  and library file
 
 ![Wave Form in Processing](https://github.com/Protocentral/HealthyPi/blob/master/Processing/Final-Output/output.png)
 
