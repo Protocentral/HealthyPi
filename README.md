@@ -1,7 +1,7 @@
 ﻿
 Repository Contents
 -------------------
-* **/Libraries** - Arduino library and example sketches.
+* **/Libraries** - Atmel studio  and example sketches.
 * **/Hardware** - All Eagle design files (.brd, .sch)
 * **/extras** - includes the datasheet
 * **/Processing** - setup  and library file
