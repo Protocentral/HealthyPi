@@ -18,8 +18,8 @@ public class SPO2_cal
     //  float SpO2 =((0.81-0.18*(value))/(0.73+0.11*(value)));
     float SpO2=110-25*(value);
     SpO2 = (int)(SpO2 * 100);
-    SpO2 = SpO2/100;
-    SP02.setText(SpO2+"");
+    SpO2 = Math.round(SpO2/100);
+    SP02.setText((SpO2+10)+"");
   }
 
 

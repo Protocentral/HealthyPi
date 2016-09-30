@@ -1,7 +1,7 @@
 class HelpWidget {
 
   public float x, y, w, h;
-  String currentOutput = "..."; //current text shown in help widget, based on most recent command
+  String currentOutput = ""; //current text shown in help widget, based on most recent command
 
   int padding = 5;
 
@@ -22,6 +22,7 @@ class HelpWidget {
 
     // draw background of widget
     fill(0,102,204);
+    //fill(255);
     rect(x, height-h, width, h);
 
     //draw bg of text field of widget

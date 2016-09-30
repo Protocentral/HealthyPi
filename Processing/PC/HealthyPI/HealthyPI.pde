@@ -2,6 +2,8 @@ import processing.serial.*;
 import g4p_controls.*;
 import java.awt.*;
 import javax.swing.JFileChooser;
+import javax.swing.*;
+import static javax.swing.JOptionPane.*;
 
 import java.math.*;
 import java.io.FileWriter;
@@ -106,7 +108,7 @@ boolean startPlot = false, Serialevent = false;
 String msgs;
 int startTime = 0;
 
-int pSize = 500;
+int pSize = 1000;
 
 float[] xdata = new float[pSize];
 
@@ -132,6 +134,7 @@ float time = 0;
 float sineCurve = 0;
 
 String selectedPort;
+boolean gStatus;
 
 /************** Class Objects **********************/
 
@@ -145,16 +148,14 @@ SPO2_cal s;
 /************** Setup Function **********************/
 
 public void setup() {
-  size(800, 480, JAVA2D);
-  surface.setResizable(true);
-  // fullScreen();
+  size(800, 480, JAVA2D);  
   createGUI();
   customGUI();
 
   headerButton = new HeaderButton(0, 0, width, 50);
 
-  helpWidget = new HelpWidget(0, height - 30, width, 40); 
-  g = new Graph(10, 60, width-220, 100);
+  helpWidget = new HelpWidget(0, height - 50, width, 68); 
+  g = new Graph(10, 60, width-225, 100);
   g1 = new Graph(10, 330, width-220, 100);
   g2 = new Graph(10, 200, width-220, 100);
 
@@ -181,9 +182,6 @@ public void draw() {
     startSerial();
   }
   g.DrawAxis();
-  g1.DrawAxis();
-  g2.DrawAxis();
-
   if (startPlot)
   {
     g.LineGraph(xdata, ecgdata);
@@ -191,20 +189,20 @@ public void draw() {
     g2.LineGraph(xdata, ppgArray);
   } else
   {
-    bpm1.setText("0");
-    BP.setText("0");
-    Temp.setText("0");
-    SP02.setText("0");
-    rpm.setText("0");
+    bpm1.setText("---");
+    BP.setText("---/---");
+    Temp.setText("---");
+    SP02.setText("---");
+    rpm.setText("---");
   }
 
   stroke(255);
   strokeWeight(2);
-  line(600, 50, 600, height-40);
-  line(600, 150, width, 150);
-  line(600, 250, width, 250);
-  line(600, 350, width, 350);
-  line(690, 350, 690, height-40);
+  line(595, 0, 595, height-40);
+  line(595, 130, width, 130);
+  line(595, 210, width, 210);
+  line(595, 305, width, 305);
+  line(695, 305, 695, height-40);
 
   headerButton.draw();
   helpWidget.draw();
@@ -221,6 +219,7 @@ void startSerial()
     serialSet = true;
     msgs = "Port "+selectedPort+" is opened Click Start button";
     portName = "\\"+selectedPort+".txt";
+    startPlot = true;
   }
   catch(Exception e)
   {
@@ -274,10 +273,9 @@ void ecsProcessData(char rxch)
         CES_Pkt_PktType = (int) rxch;
     } else if ( (CES_Pkt_Pos_Counter >= CES_CMDIF_PKT_OVERHEAD) && (CES_Pkt_Pos_Counter < CES_CMDIF_PKT_OVERHEAD+CES_Pkt_Len+1) )  //Read Data
     {
-      println("1");
+
       if (CES_Pkt_PktType == 2)
       {
-        println("data");
         CES_Pkt_Data_Counter[CES_Data_Counter++] = (char) (rxch);
       }
     } else  //All header and data received
@@ -299,7 +297,7 @@ void ecsProcessData(char rxch)
         CES_Pkt_SpO2_Counter_IR[1] = CES_Pkt_Data_Counter[9];
         CES_Pkt_SpO2_Counter_IR[2] = CES_Pkt_Data_Counter[10];
         CES_Pkt_SpO2_Counter_IR[3] = CES_Pkt_Data_Counter[11];
-        
+
         CES_Pkt_SpO2_Counter_RED[0] = CES_Pkt_Data_Counter[12];
         CES_Pkt_SpO2_Counter_RED[1] = CES_Pkt_Data_Counter[13];
         CES_Pkt_SpO2_Counter_RED[2] = CES_Pkt_Data_Counter[14];
@@ -317,24 +315,20 @@ void ecsProcessData(char rxch)
 
         int data3 = ecsParsePacket(CES_Pkt_SpO2_Counter_IR, CES_Pkt_SpO2_Counter_IR.length-1);
         spo2_ir = (double) data3;
-        
+
         int data4 = ecsParsePacket(CES_Pkt_SpO2_Counter_RED, CES_Pkt_SpO2_Counter_RED.length-1);
         spo2_red = (double) data4;
-        
-         println(ecg, spo2, resp);
 
         ecg_avg[arrayIndex] = (float)ecg;
         ecgAvg = averageValue(ecg_avg);
         ecg = (ecg_avg[arrayIndex] - ecgAvg);
-         
+
         spo2Array_IR[arrayIndex] = (float)spo2_ir;
         spo2Array_RED[arrayIndex] = (float)spo2_red;
-        
         redAvg = averageValue(spo2Array_RED);
         irAvg = averageValue(spo2Array_IR);
-        
         spo2 = (spo2Array_IR[arrayIndex] - irAvg);
-          
+
         resp_avg[arrayIndex]= (float)resp;
         resAvg =  averageValue(resp_avg);
         resp = (resp_avg[arrayIndex] - resAvg);
@@ -360,10 +354,9 @@ void ecsProcessData(char rxch)
           {
             hr.bpmCalc(bpmArray);
             s.rawDataArray(spo2Array_IR, spo2Array_RED, irAvg, redAvg);
-            rpm.setText("50");
-            //SP02.setText("95.48");
-            BP.setText(BP_Value_Sys+"/"+BP_Value_Dia);
-            Temp.setText(Temp_Value+"");
+            BP.setText("---/---");
+            Temp.setText("---");
+            rpm.setText("---");
           }
         }       
 
@@ -373,14 +366,13 @@ void ecsProcessData(char rxch)
         minr = min(respdata);
         maxs = max(spo2data);
         mins = min(spo2data);
-        // println(maxe,maxr,maxs,mine,minr,mins);
 
         if ((maxe != g.yMax1))
           g.yMax1 = (int)maxe;
         if ((maxr != g1.yMax1))
-          g1.yMax1 = (int)maxr+1;
+          g1.yMax1 = (int)maxr;
         if ((maxs != g2.yMax1))
-          g2.yMax1 = (int)maxs+1;
+          g2.yMax1 = (int)maxs;
 
         if ((mine != g.yMin1))
           g.yMin1 = (int)mine;
@@ -434,11 +426,11 @@ void setChartSettings() {
   g.xLabel="";
   g.yLabel="";
   g.Title="";  
-  g.xDiv=10;  
+  g.xDiv=11; 
   g.xMax1=pSize; 
   g.xMin1=0;  
-  g.yMax1=10; 
-  g.yMin1=-1;
+  g.yMax1=1300; 
+  g.yMin1=-400;
 
   g1.xLabel="";
   g1.yLabel="";
@@ -473,7 +465,7 @@ public void customGUI() {
   portList.setItems(comList1, 0);
   done.setVisible(false);
   bpm1.setLocalColor(2, color(0, 255, 0));
-  bpm1.setFont(new Font("Arial", Font.PLAIN, 70));
+  bpm1.setFont(new Font("Arial", Font.PLAIN, 50));
   label1.setLocalColor(2, color(255, 0, 0));                                  // BP
   label1.setFont(new Font("Arial", Font.PLAIN, 12));
   label2.setLocalColor(2, color(255, 255, 0));                                //SP02
@@ -496,7 +488,7 @@ public void customGUI() {
   label9.setFont(new Font("Arial", Font.PLAIN, 12));                          
   label9.setTextBold();
   BP.setLocalColor(2, color(255, 0, 0));
-  BP.setFont(new Font("Arial", Font.PLAIN, 50));
+  BP.setFont(new Font("Arial", Font.PLAIN, 45));
   Temp.setLocalColorScheme(255);
   Temp.setFont(new Font("Arial", Font.PLAIN, 50));
   SP02.setLocalColor(2, color(255, 255, 0));
@@ -504,6 +496,15 @@ public void customGUI() {
   rpm.setLocalColor(2, color(0, 191, 255));
   rpm.setText("0");
   rpm.setFont(new Font("Arial", Font.PLAIN, 50));
+ 
+  la.setLocalColor(2, color(255));                                  // Grid Status
+  la.setFont(new Font("Arial", Font.PLAIN, 18));
+  label10.setLocalColor(2, color(255));                                  // Grid Size
+  label10.setFont(new Font("Arial", Font.PLAIN, 18));
+  
+  settings.setVisible(false);
+  grid_size.setVisible(false);
+  
 }
 
 double averageValue(float dataArray[])
