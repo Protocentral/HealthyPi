@@ -504,6 +504,7 @@ public void customGUI() {
   
   settings.setVisible(false);
   grid_size.setVisible(false);
+  record.setVisible(false);
   
 }
 
