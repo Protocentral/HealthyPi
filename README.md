@@ -7,7 +7,7 @@ Repository Contents
 * **/Processing** - setup  and library file
 
 ![Wave Form in Processing](https://github.com/Protocentral/HealthyPi/blob/master/Processing/Final-Output/HealthyPi.png)
-![Wave Form in Processing using Raspberry Pi](https://github.com/Protocentral/HealthyPi/blob/master/Processing/Final-Output/healthypi_RPI.jpg)
+![Wave Form in Processing using Raspberry Pi](https://github.com/Protocentral/HealthyPi/blob/master/Processing/Final-Output/RPI_HealthyPi.jpg)
 
 
 License Information
