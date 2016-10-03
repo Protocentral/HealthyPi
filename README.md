@@ -95,7 +95,7 @@ Locate the Processing sketchbook directory on your computer. This should have be
 * On MAC : /Users/your_user_name/Documents/Processing
 * On Linux : /Home/your_user_name/sketchbook/
 
-Note: This directory appears as "Processing" on Windows/Mac, and goes by the name "Sketchbook" on Linux. Create a subdirectory by name "libraries if one doesn't exist already.
+** Note: ** This directory appears as "Processing" on Windows/Mac, and goes by the name "Sketchbook" on Linux. Create a subdirectory by name "libraries if one doesn't exist already.
 
 From the above mentioned "HealthyPi" directory Copy/Move the contents of the HealthyPi/Processing/HealthyPi folder to the Processing sketchbook directory which is also mentioned above (Locate the Processing sketchbook)
 
