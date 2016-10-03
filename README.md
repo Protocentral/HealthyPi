@@ -28,14 +28,19 @@ sudo apt-get upgrade
 *Run the configuration command and follow the instructions below:
 		sudo raspi-config
 
+![Enable Serial Port]
 (https://github.com/Protocentral/HealthyPi/blob/master/Processing/Final-Output/advance_option.png)
 
+![Enable Serial Port]
 (https://github.com/Protocentral/HealthyPi/blob/master/Processing/Final-Output/Serial_option.png)
 
+![Enable Serial Port]
 (https://github.com/Protocentral/HealthyPi/blob/master/Processing/Final-Output/enable_serial.png)
 
+![Enable Serial Port]
 (https://github.com/Protocentral/HealthyPi/blob/master/Processing/Final-Output/ok.png)
 
+![Enable Serial Port]
 (https://github.com/Protocentral/HealthyPi/blob/master/Processing/Final-Output/reboot.png)
 
 ![Wave Form in Processing](https://github.com/Protocentral/HealthyPi/blob/master/Processing/Final-Output/HealthyPi.png)
