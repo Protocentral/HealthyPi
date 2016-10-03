@@ -77,11 +77,11 @@ Processing IDE is used as visualization software for the patient monitor. It is 
 ###Step 1 : Download Processing IDE for your operating system
 
 Latest Version of the Processing IDE can be downloaded from the following links:
-*MAC OS
-*Linux 32-bit
-*Linux 64-bit
-*Windows 32-bit
-*Windows 64-bit
+* MAC OS
+* Linux 32-bit
+* Linux 64-bit
+* Windows 32-bit
+* Windows 64-bit
 Unzip the file once downloaded.
 
 ###Step 2 : Download the Processing code for Patient Monitor Visualization
@@ -91,9 +91,9 @@ Download the necessary files & directories or clone to your desktop from GitHub.
 Unzipping the archive should make a folder by name HealthyPi that contains the visualisation code.
 
 Locate the Processing sketchbook directory on your computer. This should have been created automatically when you installed processing. Depending on your operating system, the path will be as follows:
-*On Windows : C:/My Documents/Processing
-*On MAC : /Users/your_user_name/Documents/Processing
-*On Linux : /Home/your_user_name/sketchbook/
+* On Windows : C:/My Documents/Processing
+* On MAC : /Users/your_user_name/Documents/Processing
+* On Linux : /Home/your_user_name/sketchbook/
 Note: This directory appears as "Processing" on Windows/Mac, and goes by the name "Sketchbook" on Linux. Create a subdirectory by name "libraries if one doesn't exist already.
 
 From the above mentioned "HealthyPi" directory Copy/Move the contents of the HealthyPi/Processing/HealthyPi folder to the Processing sketchbook directory which is also mentioned above (Locate the Processing sketchbook)
