@@ -18,17 +18,18 @@ The following are the steps involved to get Raspberry Pi ready for a patient mon
 
 ### 1 : Install and Update the OS
 
-*Install the Raspbian OS in Raspberry Pi. The image file can be downloaded from the Raspberry Pi's official website.
-*Once the installation finishes, update the system with the following command in the Terminal:
+Install the Raspbian OS in Raspberry Pi. The image file can be downloaded from the Raspberry Pi's official website.
+
+Once the installation finishes, update the system with the following command in the Terminal:
 		
 		sudo apt-get update
-		
 		sudo apt-get upgrade
 
 ### 2 : Enable the Serial Connection
 
-*Serial communication should be enabled to interface with the ProtoCentral Healthy PI HAT.
-*Run the configuration command and follow the instructions below:
+Serial communication should be enabled to interface with the ProtoCentral Healthy PI HAT.
+
+Run the configuration command and follow the instructions below:
 
 		sudo raspi-config
 
