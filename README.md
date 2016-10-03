@@ -16,7 +16,7 @@ Setting up Raspberry Pi for UART Communication
 ----------------------------------------------
 The following are the steps involved to get Raspberry Pi ready for a patient monitor.
 
-### 1 : Install and Update the OS
+###Step 1 : Install and Update the OS
 
 * Install the Raspbian OS in Raspberry Pi. The image file can be downloaded from the Raspberry Pi's official website.
 
@@ -25,7 +25,7 @@ The following are the steps involved to get Raspberry Pi ready for a patient mon
 		sudo apt-get update
 		sudo apt-get upgrade
 
-### 2 : Enable the Serial Connection
+###Step 2 : Enable the Serial Connection
 
 * Serial communication should be enabled to interface with the ProtoCentral Healthy PI HAT.
 
@@ -48,7 +48,7 @@ The following are the steps involved to get Raspberry Pi ready for a patient mon
 ![Enable Serial Port]
 (https://github.com/Protocentral/HealthyPi/blob/master/Processing/Final-Output/reboot.png)
 
-### 3 : Disable onboard Pi3 Bluetooth and restore UART0/ttyAMA0
+###Step 3 : Disable onboard Pi3 Bluetooth and restore UART0/ttyAMA0
 
 As the ProtoCentral's Healthy Pi Hat communicates with the Raspberry Pi board via GPIO 14/15 which on the Model B, B+ and Pi2 is mapped to UART0. However on the Pi3 these pins are mapped to UART1 since UART0 is now used for the bluetooth module. As UART1 is not stable because it is dependent to clock speed which can change with the CPU load, we have to disable the Bluetooth module and map UART1 back to UART0 (tty/AMA0).
 
@@ -65,9 +65,46 @@ As the ProtoCentral's Healthy Pi Hat communicates with the Raspberry Pi board vi
 
 		sudo nano /boot/cmdline.txt 
 
-* Remove the word phase "console=serial0,115200 " or "console=ttyAMA0,115200 "
+* Remove the word phase "console=serial0,115200" or "console=ttyAMA0,115200".
 * Save and Exit the file and Reboot the Pi.
 * Now the your Pi is ready to integrate with ProtoCentral's Healthy Pi Hat.
+
+Visualization Software For Patient Monitor
+------------------------------------------
+
+Processing IDE is used as visualization software for the patient monitor. It is an open source framework based on Java. The following are the steps to get the visualization software ready for patient monitor:
+
+###Step 1 : Download Processing IDE for your operating system
+
+Latest Version of the Processing IDE can be downloaded from the following links:
+*MAC OS
+*Linux 32-bit
+*Linux 64-bit
+*Windows 32-bit
+*Windows 64-bit
+Unzip the file once downloaded.
+
+###Step 2 : Download the Processing code for Patient Monitor Visualization
+
+Download the necessary files & directories or clone to your desktop from GitHub.
+
+Unzipping the archive should make a folder by name HealthyPi that contains the visualisation code.
+
+Locate the Processing sketchbook directory on your computer. This should have been created automatically when you installed processing. Depending on your operating system, the path will be as follows:
+*On Windows : C:/My Documents/Processing
+*On MAC : /Users/your_user_name/Documents/Processing
+*On Linux : /Home/your_user_name/sketchbook/
+Note: This directory appears as "Processing" on Windows/Mac, and goes by the name "Sketchbook" on Linux. Create a subdirectory by name "libraries if one doesn't exist already.
+
+From the above mentioned "HealthyPi" directory Copy/Move the contents of the HealthyPi/Processing/HealthyPi folder to the Processing sketchbook directory which is also mentioned above (Locate the Processing sketchbook)
+
+Finally, copy the "controlP5 & G4P" folders from HealthyPi/Processing/libraries/ and paste them into the libraries directory of your Processing sketchbook.
+
+###Step 3 : Upload the Processing code Raspberry Pi
+
+In Processing IDE, Select "Tools" from the menu and choose, "Add tools".
+
+Select "Upload To Pi" tool and click Install button which is present in the button right corner as shown in the below image.
 
 ![Wave Form in Processing](https://github.com/Protocentral/HealthyPi/blob/master/Processing/Final-Output/HealthyPi.png)
 
