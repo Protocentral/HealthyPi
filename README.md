@@ -18,18 +18,18 @@ The following are the steps involved to get Raspberry Pi ready for a patient mon
 
 ### 1 : Install and Update the OS
 
-* **Install the Raspbian OS in Raspberry Pi. The image file can be downloaded from the Raspberry Pi's official website.
+* Install the Raspbian OS in Raspberry Pi. The image file can be downloaded from the Raspberry Pi's official website.
 
-* **Once the installation finishes, update the system with the following command in the Terminal:
+* Once the installation finishes, update the system with the following command in the Terminal:
 		
 		sudo apt-get update
 		sudo apt-get upgrade
 
 ### 2 : Enable the Serial Connection
 
-* **Serial communication should be enabled to interface with the ProtoCentral Healthy PI HAT.
+* Serial communication should be enabled to interface with the ProtoCentral Healthy PI HAT.
 
-* **Run the configuration command and follow the instructions below:
+* Run the configuration command and follow the instructions below:
 
 		sudo raspi-config
 
@@ -52,22 +52,22 @@ The following are the steps involved to get Raspberry Pi ready for a patient mon
 
 As the ProtoCentral's Healthy Pi Hat communicates with the Raspberry Pi board via GPIO 14/15 which on the Model B, B+ and Pi2 is mapped to UART0. However on the Pi3 these pins are mapped to UART1 since UART0 is now used for the bluetooth module. As UART1 is not stable because it is dependent to clock speed which can change with the CPU load, we have to disable the Bluetooth module and map UART1 back to UART0 (tty/AMA0).
 
-* **Run the following command:
+* Run the following command
 
 		sudo nano /boot/config.txt
 
-* **Add this line to the end of the file:
+* Add this line to the end of the file
 
 		dtoverlay=pi3-miniuart-bt
 
-* **Save the file and Reboot the Pi.
-* **To disable the Serial Console edit the file using
+* Save the file and Reboot the Pi.
+* To disable the Serial Console edit the file using
 
 		sudo nano /boot/cmdline.txt 
 
-* **Remove the word phase "console=serial0,115200 " or "console=ttyAMA0,115200 "
-* **Save and Exit the file and Reboot the Pi.
-* **Now the your Pi is ready to integrate with ProtoCentral's Healthy Pi Hat.
+* Remove the word phase "console=serial0,115200 " or "console=ttyAMA0,115200 "
+* Save and Exit the file and Reboot the Pi.
+* Now the your Pi is ready to integrate with ProtoCentral's Healthy Pi Hat.
 
 ![Wave Form in Processing](https://github.com/Protocentral/HealthyPi/blob/master/Processing/Final-Output/HealthyPi.png)
 
