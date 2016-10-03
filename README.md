@@ -96,7 +96,7 @@ Locate the Processing sketchbook directory on your computer. This should have be
 * On MAC : /Users/your_user_name/Documents/Processing
 * On Linux : /Home/your_user_name/sketchbook/
 
-** Note: ** This directory appears as "Processing" on Windows/Mac, and goes by the name "Sketchbook" on Linux. Create a subdirectory by name "libraries if one doesn't exist already.
+**Note:** This directory appears as "Processing" on Windows/Mac, and goes by the name "Sketchbook" on Linux. Create a subdirectory by name "libraries if one doesn't exist already.
 
 From the above mentioned "HealthyPi" directory Copy/Move the contents of the HealthyPi/Processing/HealthyPi folder to the Processing sketchbook directory which is also mentioned above (Locate the Processing sketchbook)
 
@@ -104,11 +104,25 @@ Finally, copy the "controlP5 & G4P" folders from HealthyPi/Processing/libraries/
 
 ###Step 3 : Upload the Processing code Raspberry Pi
 
-In Processing IDE, Select "Tools" from the menu and choose, "Add tools".
+* In Processing IDE, Select "Tools" from the menu and choose, "Add tools".
 
-Select "Upload To Pi" tool and click Install button which is present in the button right corner as shown in the below image.
+* Select "Upload To Pi" tool and click Install button which is present in the button right corner as shown in the below image.
 
+![Upload To Pi in Processing]
 (https://github.com/Protocentral/HealthyPi/blob/master/Processing/Final-Output/Upload%20To%20Pi.png)
+
+* Now, connect your raspberry pi to the internet with the same network as your laptop is connected.
+
+* Select "Tools" menu and choose "Upload to Pi" option from the list.
+
+* If any error occured in uploading the code, check for the internet connection and repeat the process.
+
+Connecting the Raspberry Pi to ProtoCentral's Healthy PI Hat
+------------------------------------------------------------
+
+Mount ProtoCentral's Healthy PI Hat carefully onto the Raspberry Pi Board's GPIO Pins. And connect this setup with the Raspberry Pi's Display or HDMI Monitor. The Hat communicate with Raspberry Pi using UART interface. Connect the ECG electrodes and SPO2 Probe to the ProtoCentral's Healthy PI Hat.
+
+Now you have your own patient monitor with the help of Raspberry PI and ProtoCentral's Helathy PI Hat.
 
 ![Wave Form in Processing](https://github.com/Protocentral/HealthyPi/blob/master/Processing/Final-Output/HealthyPi.png)
 
