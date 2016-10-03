@@ -22,6 +22,7 @@ The following are the steps involved to get Raspberry Pi ready for a patient mon
 *Once the installation finishes, update the system with the following command in the Terminal.
 
 sudo apt-get update
+
 sudo apt-get upgrade
 
 ### 2 : Enable the Serial Connection
