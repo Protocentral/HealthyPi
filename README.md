@@ -76,31 +76,33 @@ Processing IDE is used as visualization software for the patient monitor. It is 
 
 ###Step 1 : Download Processing IDE for your operating system
 
-Latest Version of the Processing IDE can be downloaded from the following links:
-* MAC OS
-* Linux 32-bit
-* Linux 64-bit
-* Windows 32-bit
-* Windows 64-bit
+a. Latest Version of the Processing IDE can be downloaded from the following links:
 
-Unzip the file once downloaded.
+* [MAC] (http://download.processing.org/processing-3.2.1-macosx.zip)
+* [Linux 32-bit] (http://download.processing.org/processing-3.2.1-linux32.tgz)
+* [Linux 64-bit] (http://download.processing.org/processing-3.2.1-linux64.tgz)
+* [Windows 32-bit] (http://download.processing.org/processing-3.2.1-windows32.zip)
+* [Windows 64-bit] (http://download.processing.org/processing-3.2.1-windows64.zip)
+
+b. Unzip the file once downloaded.
 
 ###Step 2 : Download the Processing code for Patient Monitor Visualization
 
-Download the necessary files & directories or clone to your desktop from GitHub.
+a. Download the necessary files & directories or clone to your desktop from GitHub.
 
-Unzipping the archive should make a folder by name HealthyPi that contains the visualisation code.
+b. Unzipping the archive should make a folder by name HealthyPi that contains the visualisation code.
 
-Locate the Processing sketchbook directory on your computer. This should have been created automatically when you installed processing. Depending on your operating system, the path will be as follows:
+c. Locate the Processing sketchbook directory on your computer. This should have been created automatically when you installed processing. Depending on your operating system, the path will be as follows:
+
 * On Windows : C:/My Documents/Processing
 * On MAC : /Users/your_user_name/Documents/Processing
 * On Linux : /Home/your_user_name/sketchbook/
 
 **Note:** This directory appears as "Processing" on Windows/Mac, and goes by the name "Sketchbook" on Linux. Create a subdirectory by name "libraries if one doesn't exist already.
 
-From the above mentioned "HealthyPi" directory Copy/Move the contents of the HealthyPi/Processing/HealthyPi folder to the Processing sketchbook directory which is also mentioned above (Locate the Processing sketchbook)
+d. From the above mentioned "HealthyPi" directory Copy/Move the contents of the HealthyPi/Processing/HealthyPi folder to the Processing sketchbook directory which is also mentioned above (Locate the Processing sketchbook)
 
-Finally, copy the "controlP5 & G4P" folders from HealthyPi/Processing/libraries/ and paste them into the libraries directory of your Processing sketchbook.
+e. Finally, copy the "controlP5 & G4P" folders from HealthyPi/Processing/libraries/ and paste them into the libraries directory of your Processing sketchbook.
 
 ###Step 3 : Upload the Processing code Raspberry Pi
 
