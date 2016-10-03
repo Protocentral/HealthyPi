@@ -82,6 +82,7 @@ Latest Version of the Processing IDE can be downloaded from the following links:
 * Linux 64-bit
 * Windows 32-bit
 * Windows 64-bit
+
 Unzip the file once downloaded.
 
 ###Step 2 : Download the Processing code for Patient Monitor Visualization
@@ -106,6 +107,8 @@ Finally, copy the "controlP5 & G4P" folders from HealthyPi/Processing/libraries/
 In Processing IDE, Select "Tools" from the menu and choose, "Add tools".
 
 Select "Upload To Pi" tool and click Install button which is present in the button right corner as shown in the below image.
+
+(https://github.com/Protocentral/HealthyPi/blob/master/Processing/Final-Output/Upload%20To%20Pi.png)
 
 ![Wave Form in Processing](https://github.com/Protocentral/HealthyPi/blob/master/Processing/Final-Output/HealthyPi.png)
 
