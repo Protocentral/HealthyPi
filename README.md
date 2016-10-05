@@ -1,7 +1,7 @@
 HEALTHY PI
 ==========
 
-![Wave Form in Processing using Raspberry Pi](https://github.com/Protocentral/HealthyPi/blob/master/Processing/Final-Output/RPI_HealthyPi.jpg)
+![Wave Form in Processing using Raspberry Pi](https://github.com/Protocentral/HealthyPi/blob/master/Processing/output/RPI_HealthyPi.jpg)
 
 Raspberry Pi boards are used in many applications like Media streamer, Arcade machine, Tablet computer, Home automation, many more. And now Raspberry Pi can be used as patient monitor with the help of ProtoCentral's Healthy Pi Hat. This patient monitor is portable and efficient in monitoring ECG, Heart Rate, SPO2, Respiration, Temperature and Blood Pressure of a patient. This project shows how to use Raspberry Pi Board along with the ProtoCentral's Healthy PI Hat to change into Patient Monitor.
 
@@ -34,19 +34,19 @@ The following are the steps involved to get Raspberry Pi ready for a patient mon
 		sudo raspi-config
 
 ![Enable Serial Port]
-(https://github.com/Protocentral/HealthyPi/blob/master/Processing/Final-Output/advance_option.png)
+(https://github.com/Protocentral/HealthyPi/blob/master/extras/Images/advance_option.png)
 
 ![Enable Serial Port]
-(https://github.com/Protocentral/HealthyPi/blob/master/Processing/Final-Output/Serial_option.png)
+(https://github.com/Protocentral/HealthyPi/blob/master/extras/Images/Serial_option.png)
 
 ![Enable Serial Port]
-(https://github.com/Protocentral/HealthyPi/blob/master/Processing/Final-Output/enable_serial.png)
+(https://github.com/Protocentral/HealthyPi/blob/master/extras/Images/enable_serial.png)
 
 ![Enable Serial Port]
-(https://github.com/Protocentral/HealthyPi/blob/master/Processing/Final-Output/ok.png)
+(https://github.com/Protocentral/HealthyPi/blob/master/extras/Images/ok.png)
 
 ![Enable Serial Port]
-(https://github.com/Protocentral/HealthyPi/blob/master/Processing/Final-Output/reboot.png)
+(https://github.com/Protocentral/HealthyPi/blob/master/extras/Images/reboot.png)
 
 ###Step 3 : Disable onboard Pi3 Bluetooth and restore UART0/ttyAMA0
 
@@ -126,7 +126,7 @@ Mount ProtoCentral's Healthy PI Hat carefully onto the Raspberry Pi Board's GPIO
 
 Now you have your own patient monitor with the help of Raspberry PI and ProtoCentral's Helathy PI Hat.
 
-![Wave Form in Processing](https://github.com/Protocentral/HealthyPi/blob/master/Processing/Final-Output/HealthyPi.png)
+![Wave Form in Processing](https://github.com/Protocentral/HealthyPi/blob/master/Processing/output/HealthyPi.png)
 
 
 License Information
