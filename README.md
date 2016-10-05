@@ -12,6 +12,11 @@ Repository Contents
 * **/extras** - includes the datasheet
 * **/Processing** - setup  and library file
 
+Board Overview
+--------------
+![Healthy Pi Hat](https://github.com/Protocentral/HealthyPi/blob/master/extra/Images/Healthy Pi.jpg)
+
+
 Setting up Raspberry Pi for UART Communication
 ----------------------------------------------
 The following are the steps involved to get Raspberry Pi ready for a patient monitor.
