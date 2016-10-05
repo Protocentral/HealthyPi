@@ -14,7 +14,7 @@ Repository Contents
 
 Board Overview
 --------------
-![Healthy Pi Hat](https://github.com/Protocentral/HealthyPi/blob/master/extra/Images/Healthy Pi.jpg)
+![Healthy Pi Hat](https://github.com/Protocentral/HealthyPi/blob/master/extras/Images/Healthy%20Pi.png)
 
 
 Setting up Raspberry Pi for UART Communication
