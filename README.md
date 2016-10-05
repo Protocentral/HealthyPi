@@ -35,18 +35,19 @@ Please note that Atmel Studio 7 does not support Mac and Linux . This is the IDE
 
 You need a debugger to load the code into the SAMD21G18A. Atmel-ICE will help get from here http://www.atmel.com/tools/atatmel-ice.aspx
 
-**Step 1 :** Set Up and Check Interface
+**Step 1 : Set Up and Check Interface**
 * Attach the chip & debugger
-**Step 2 :** Identify Interface
+
+**Step 2 : Identify Interface**
 * OK now you have your debugger plugged in, its good to check that it works, select Device Programming.
 * Choose "Device Programmer" from "Tools" Menu
 * Programming window will be open.
 * Select the programmer from the drop down box. Select interface as “SWD”. Click on “Apply”.
 * Now read the Power and Device ID. If you are able to read the Device ID then the interface is fine.
 
-**Step 3 :** Build & Start Debugging
+**Step 3 : Build & Start Debugging**
 * Ok close out the modal programming window and build the program. If there are no error, then your build will be successful.
-**Step 4 :** Run & Upload
+**Step 4 : Run & Upload**
 * You will see a window appearing to select a debugging tool. Select the tool and interface.
 * Once done, go back and Re-run Program without debugging.
 
