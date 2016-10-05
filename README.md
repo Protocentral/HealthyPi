@@ -16,6 +16,17 @@ Board Overview
 --------------
 ![Healthy Pi Hat](https://github.com/Protocentral/HealthyPi/blob/master/extras/Images/Healthy%20Pi.png)
 
+How To Get Started:
+--------------
+
+The board is pre-loaded with the firmware which works stand alone with the Rpi with fewer setup. However you will need some software. Here's what we're using:
+* **Atmel Studio 7**
+Please note that Atmel Studio 7 does not support Mac and Linux . This is the IDE software that can do step & memory debugging and its only for Windows. Also you have to make an account on Atmel's site. The IDE can be downloaded fromAtmel Studio's Official Website.
+
+Let's Go
+Load the Healthy Pi Source Code
+Step 1 : Start by launching Atmel Studio 7.
+
 
 Setting up Raspberry Pi for UART Communication
 ----------------------------------------------
