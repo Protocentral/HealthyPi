@@ -47,6 +47,7 @@ You need a debugger to load the code into the SAMD21G18A. Atmel-ICE will help ge
 
 **Step 3 : Build & Start Debugging**
 * Ok close out the modal programming window and build the program. If there are no error, then your build will be successful.
+
 **Step 4 : Run & Upload**
 * You will see a window appearing to select a debugging tool. Select the tool and interface.
 * Once done, go back and Re-run Program without debugging.
