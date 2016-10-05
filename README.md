@@ -116,7 +116,7 @@ e. Finally, copy the "controlP5 & G4P" folders from HealthyPi/Processing/librari
 * Select "Upload To Pi" tool and click Install button which is present in the button right corner as shown in the below image.
 
 ![Upload To Pi in Processing]
-(https://github.com/Protocentral/HealthyPi/blob/master/Processing/Final-Output/Upload%20To%20Pi.png)
+(https://github.com/Protocentral/HealthyPi/blob/master/extras/Images/Upload_To_Pi.png)
 
 * Now, connect your raspberry pi to the internet with the same network as your laptop is connected.
 
