@@ -21,7 +21,7 @@ How To Get Started:
 
 The board is pre-loaded with the firmware which works stand alone with the Rpi with fewer setup. However you will need some software. Here's what we're using:
 * **Atmel Studio 7** :
-Please note that Atmel Studio 7 does not support Mac and Linux . This is the IDE software that can do step & memory debugging and its only for Windows. Also you have to make an account on Atmel's site. The IDE can be downloaded from ![Atmel Studio's Official Website](http://www.atmel.com/tools/atmelstudio.aspx)
+Please note that Atmel Studio 7 does not support Mac and Linux . This is the IDE software that can do step & memory debugging and its only for Windows. Also you have to make an account on Atmel's site. The IDE can be downloaded from [Atmel Studio's Official Website](http://www.atmel.com/tools/atmelstudio.aspx)
 
 **Load the Healthy Pi Source Code**
 
@@ -59,7 +59,7 @@ The following are the steps involved to get Raspberry Pi ready for a patient mon
 
 ###Step 1 : Install and Update the OS
 
-* Install the Raspbian OS in Raspberry Pi. The image file can be downloaded from the Raspberry Pi's official website(https://www.raspberrypi.org/downloads/).
+* Install the Raspbian OS in Raspberry Pi. The image file can be downloaded from the [Raspberry Pi's official website](https://www.raspberrypi.org/downloads/).
 
 * Once the installation finishes, update the system with the following command in the Terminal:
 		
