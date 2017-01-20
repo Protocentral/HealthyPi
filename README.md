@@ -1,16 +1,16 @@
 HEALTHY PI
 ==========
 
-![Wave Form in Processing using Raspberry Pi](https://github.com/Protocentral/HealthyPi/blob/master/Processing/output/RPI_HealthyPi.jpg)
+![Wave Form in Processing using Raspberry Pi](https://github.com/Protocentral/HealthyPi/blob/master/extras/Images/rpi_healthypi.jpg)
 
 Raspberry Pi boards are used in many applications like Media streamer, Arcade machine, Tablet computer, Home automation, many more. And now Raspberry Pi can be used as patient monitor with the help of ProtoCentral's Healthy Pi Hat. This patient monitor is portable and efficient in monitoring ECG, Heart Rate, SPO2, Respiration, Temperature and Blood Pressure of a patient. This project shows how to use Raspberry Pi Board along with the ProtoCentral's Healthy PI Hat to change into Patient Monitor.
 
 Repository Contents
 -------------------
-* **/Libraries** - Atmel studio  and example sketches.
+* **/firmware** - Atmel studio  and example sketches.
 * **/Hardware** - All Eagle design files (.brd, .sch)
 * **/extras** - includes the datasheet
-* **/Processing** - setup  and library file
+* **/gui** - HealthyPi GUI for Raspberry Pi and PC
 
 Board Overview
 --------------
@@ -167,7 +167,7 @@ Mount ProtoCentral's Healthy PI Hat carefully onto the Raspberry Pi Board's GPIO
 
 Now you have your own patient monitor with the help of Raspberry PI and ProtoCentral's Helathy PI Hat.
 
-![Wave Form in Processing](https://github.com/Protocentral/HealthyPi/blob/master/Processing/output/HealthyPi.png)
+![GUI in Processing](https://github.com/Protocentral/HealthyPi/blob/master/extras/Images/gui_healthypi.png)
 
 
 License Information
