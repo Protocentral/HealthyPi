@@ -1,4 +1,4 @@
-HEALTHY PI
+ProtoCentral HealthPi HAT for Raspberry Pi
 ==========
 
 ![Wave Form in Processing using Raspberry Pi](https://github.com/Protocentral/HealthyPi/blob/master/extras/Images/rpi_healthypi.jpg)
@@ -25,15 +25,15 @@ Please note that Atmel Studio 7 does not support Mac and Linux . This is the IDE
 
 **Load the Healthy Pi Source Code**
 
-* **Step 1 :**†Start by launching Atmel Studio 7.
+* **Step 1 :**¬†Start by launching Atmel Studio 7.
 
-* **Step 2†:** Open the Project [navigate the path where the project is saved].
+* **Step 2¬†:** Open the Project [navigate the path where the project is saved].
 
-* **Step 3†:** You'll see the following, where the sketch is in a window, you can edit the code here if you like.
+* **Step 3¬†:** You'll see the following, where the sketch is in a window, you can edit the code here if you like.
 
 **Debugger**
 
-You need a debugger to load the code into the SAMD21G18A. Atmel-ICE will help get from here†http://www.atmel.com/tools/atatmel-ice.aspx
+You need a debugger to load the code into the SAMD21G18A. Atmel-ICE will help get from here¬†http://www.atmel.com/tools/atatmel-ice.aspx
 
 **Step 1 : Set Up and Check Interface**
 * Attach the chip & debugger
@@ -42,7 +42,7 @@ You need a debugger to load the code into the SAMD21G18A. Atmel-ICE will help ge
 * OK now you have your debugger plugged in, its good to check that it works, select Device Programming.
 * Choose "Device Programmer" from "Tools" Menu
 * Programming window will be open.
-* Select the programmer from the drop down box. Select interface as ìSWDî. Click on ìApplyî.
+* Select the programmer from the drop down box. Select interface as ‚ÄúSWD‚Äù. Click on ‚ÄúApply‚Äù.
 * Now read the Power and Device ID. If you are able to read the Device ID then the interface is fine.
 
 **Step 3 : Build & Start Debugging**
