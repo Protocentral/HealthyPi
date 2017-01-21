@@ -1,4 +1,4 @@
-ProtoCentral HealthPi HAT for Raspberry Pi
+ProtoCentral HealthyPi HAT for Raspberry Pi
 ==========
 
 ![Wave Form in Processing using Raspberry Pi](https://github.com/Protocentral/HealthyPi/blob/master/extras/Images/rpi_healthypi.jpg)
