@@ -25,7 +25,7 @@ Firmware:
 
 The board is pre-loaded with the firmware which works stand alone with the Rpi without any firmware development or loading required. 
 
-However, if you want to edit the firmware, you can follow the steps in this [Documents] (/docs/recompiling_firmware.md)
+However, if you want to edit the firmware, you can follow the steps in this [Documents] (/docs/recompiling-firmware.md)
 
 
 Setting up Raspberry Pi for UART Communication
@@ -41,30 +41,7 @@ The following are the steps involved to get Raspberry Pi ready for a patient mon
 		sudo apt-get update
 		sudo apt-get upgrade
 
-###Step 2 : Enable the Serial Connection
-
-* Serial communication should be enabled to interface with the ProtoCentral Healthy PI HAT.
-
-* Run the configuration command and follow the instructions below:
-
-		sudo raspi-config
-
-![Enable Serial Port]
-(https://github.com/Protocentral/HealthyPi/blob/master/extras/Images/advance_option.png)
-
-![Enable Serial Port]
-(https://github.com/Protocentral/HealthyPi/blob/master/extras/Images/Serial_option.png)
-
-![Enable Serial Port]
-(https://github.com/Protocentral/HealthyPi/blob/master/extras/Images/enable_serial.png)
-
-![Enable Serial Port]
-(https://github.com/Protocentral/HealthyPi/blob/master/extras/Images/ok.png)
-
-![Enable Serial Port]
-(https://github.com/Protocentral/HealthyPi/blob/master/extras/Images/reboot.png)
-
-###Step 3 : Disable onboard Pi3 Bluetooth and restore UART0/ttyAMA0
+###Step 2 : Enable the UART0 device tree overlay
 
 As the ProtoCentral's Healthy Pi Hat communicates with the Raspberry Pi board via GPIO 14/15 which on the Model B, B+ and Pi2 is mapped to UART0. However on the Pi3 these pins are mapped to UART1 since UART0 is now used for the bluetooth module. As UART1 is not stable because it is dependent to clock speed which can change with the CPU load, we have to disable the Bluetooth module and map UART1 back to UART0 (tty/AMA0).
 
@@ -76,14 +53,19 @@ As the ProtoCentral's Healthy Pi Hat communicates with the Raspberry Pi board vi
 
 		dtoverlay=pi3-miniuart-bt
 
-* Save the file and Reboot the Pi.
+###Step 3 : Disable Serial command line console
+
 * To disable the Serial Console edit the file using
 
 		sudo nano /boot/cmdline.txt 
 
 * Remove the word phase "console=serial0,115200" or "console=ttyAMA0,115200".
-* Save and Exit the file and Reboot the Pi.
-* Now the your Pi is ready to integrate with ProtoCentral's Healthy Pi Hat.
+
+* Save the file and close
+
+###Step 4 : Reboot your Raspberry Pi
+
+* Now your Pi is ready to integrate with ProtoCentral's Healthy Pi Hat.
 
 Visualization Software For Patient Monitor
 ------------------------------------------
