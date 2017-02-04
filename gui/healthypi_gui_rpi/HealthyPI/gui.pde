@@ -92,8 +92,8 @@ public void close_click(GButton source, GEvent event) { //_CODE_:close:222350:
   if (dialogResult == JOptionPane.YES_OPTION) {
     try
     {
-      Runtime runtime = Runtime.getRuntime();
-      Process proc = runtime.exec("sudo shutdown -h now");
+      //Runtime runtime = Runtime.getRuntime();
+      //Process proc = runtime.exec("sudo shutdown -h now");
       System.exit(0);
     }
     catch(Exception e)
