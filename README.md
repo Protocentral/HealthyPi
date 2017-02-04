@@ -25,7 +25,7 @@ Firmware:
 
 The board is pre-loaded with the firmware which works stand alone with the Rpi without any firmware development or loading required. 
 
-However, if you want to edit the firmware, you can follow the steps in this [Documents] (/docs/recompiling-firmware.md)
+However, if you want to edit the firmware, you can follow the steps in this [document] (/docs/recompiling-firmware.md)
 
 
 Setting up Raspberry Pi for UART Communication
@@ -67,24 +67,20 @@ As the ProtoCentral's Healthy Pi Hat communicates with the Raspberry Pi board vi
 
 * Now your Pi is ready to integrate with ProtoCentral's Healthy Pi Hat.
 
-Visualization Software For Patient Monitor
-------------------------------------------
+HealthyPi GUI based on Processing
+---------------------------------
 
-Processing IDE is used as visualization software for the patient monitor. It is an open source framework based on Java. The following are the steps to get the visualization software ready for patient monitor:
+[Processing[(https://processing.org/) is used to develop the visualization software for the HealthyPi. It is an open source framework based on Java. The following are the steps to get the visualization software ready for patient monitor:
 
-###Step 1 : Download Processing IDE for your operating system
+###Step 1 : Download Processing IDE for your HOST COMPUTER operating system
 
-a. Latest Version of the Processing IDE can be downloaded from the following links:
+a. Latest Version of the Processing IDE can be downloaded from the following link:
 
-* [MAC] (http://download.processing.org/processing-3.2.1-macosx.zip)
-* [Linux 32-bit] (http://download.processing.org/processing-3.2.1-linux32.tgz)
-* [Linux 64-bit] (http://download.processing.org/processing-3.2.1-linux64.tgz)
-* [Windows 32-bit] (http://download.processing.org/processing-3.2.1-windows32.zip)
-* [Windows 64-bit] (http://download.processing.org/processing-3.2.1-windows64.zip)
+[Download Processing](https://processing.org/download/?processing)
 
-b. Unzip the file once downloaded.
+b. Unzip and install the file once downloaded.
 
-###Step 2 : Download the Processing code for Patient Monitor Visualization
+###Step 2 : Download the Processing code for the HealthyPi GUI
 
 a. Download the necessary files & directories or clone to your desktop from GitHub.
 

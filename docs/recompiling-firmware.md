@@ -1,13 +1,18 @@
-The board is pre-loaded with the firmware which works stand alone with the Rpi with fewer setup. However you will need some software. Here's what we're using:
+Recompiling Firmware:
+---------------------
+
+The board is pre-loaded with the firmware which works stand alone with the Raspberry Pi with no embedded formware setup. 
+
+However, if you would like to edit the firmware, here's the steps:
 
 * **Atmel Studio 7** :
-Please note that Atmel Studio 7 does not support Mac and Linux . This is the IDE software that can do step & memory debugging and its only for Windows. Also you have to make an account on Atmel's site. The IDE can be downloaded from [Atmel Studio's Official Website](http://www.atmel.com/tools/atmelstudio.aspx)
+Please note that Atmel Studio 7 is available only for Windows and does not support Mac and Linux . This is the IDE software that can do step & memory debugging and its only for Windows. Also you have to make an account on Atmel's site. The IDE can be downloaded from [Atmel Studio's Official Website](http://www.atmel.com/tools/atmelstudio.aspx)
 
 **Load the Healthy Pi Source Code**
 
 * **Step 1 :** Start by launching Atmel Studio 7.
 
-* **Step 2 :** Open the Project [navigate the path where the project is saved].
+* **Step 2 :** Open the Project file in the firmware folder of this git respitory
 
 * **Step 3 :** You'll see the following, where the sketch is in a window, you can edit the code here if you like.
 
