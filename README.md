@@ -15,7 +15,7 @@ Repository Contents
 
 Board Overview
 --------------
-![Healthy Pi Hat](https://github.com/Protocentral/HealthyPi/blob/master/extras/Images/Healthy%20Pi.png)
+![Healthy Pi Hat](https://github.com/Protocentral/HealthyPi/blob/master/extras/Images/healthypi.jpg)
 
 Getting Started:
 ---------------
@@ -70,7 +70,9 @@ As the ProtoCentral's Healthy Pi Hat communicates with the Raspberry Pi board vi
 HealthyPi GUI based on Processing
 ---------------------------------
 
-[Processing](https://processing.org/) has been used to develop the visualization software for the HealthyPi. It is an open source framework based on Java. The following are the steps to get the visualization software ready for patient monitor:
+[Processing](https://processing.org/) has been used to develop the visualization software for the HealthyPi. 
+
+Processing is an open source framework based on Java. The following are the steps to get the visualization software ready for patient monitor:
 
 ###Step 1 : Download Processing IDE for your HOST COMPUTER operating system
 
