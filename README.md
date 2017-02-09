@@ -3,7 +3,9 @@ ProtoCentral HealthyPi HAT for Raspberry Pi
 
 ![Wave Form in Processing using Raspberry Pi](https://github.com/Protocentral/HealthyPi/blob/master/extras/Images/rpi_healthypi.jpg)
 
-Raspberry Pi boards are used in many applications like Media streamer, Arcade machine, Tablet computer, Home automation, many more. And now Raspberry Pi can be used as patient monitor with the help of ProtoCentral's Healthy Pi Hat. This patient monitor is portable and efficient in monitoring ECG, Heart Rate, SPO2, Respiration, Temperature and Blood Pressure of a patient. This project shows how to use Raspberry Pi Board along with the ProtoCentral's Healthy PI Hat to change into Patient Monitor.
+This HAT for Raspberry Pi 3 / 2 includes vital patient monitoring including ECG, respiration, pulse oximetry and features options to add blood pressure and body temperature sensing.
+
+This is a one-of-a-kind, all-in-one HAT for your Raspberry Pi 2 /3 computer. Just plug it into the Raspberry Pi, install the graphical visualisation software and start using. Unlike available shields and breakouts that we carry for Arduino, this board combines all the functions into a a single board.
 
 Repository Contents
 -------------------
@@ -20,13 +22,29 @@ Board Overview
 Getting Started:
 ---------------
 
-Firmware:
----------
+Mount ProtoCentral's Healthy PI Hat carefully onto the Raspberry Pi Board's GPIO Pins. And connect this setup with the Raspberry Pi's Display or HDMI Monitor. The Hat communicate with Raspberry Pi using UART interface. Connect the ECG electrodes and SPO2 Probe to the ProtoCentral's Healthy PI Hat.
 
-The board is pre-loaded with the firmware which works stand alone with the Rpi without any firmware development or loading required. 
+It's now easy to get started with our brand-new installation script. Just follow the following steps on your Raspberry Pi.
 
-However, if you want to edit the firmware, you can follow the steps in this [document] (/docs/recompiling-firmware.md)
+To start, open up the terminal window (Menu -> Accessories -> Terminal) on Raspbian running on your Raspberry Pi:
 
+![Open the terminal](extras/Images/terminal.jpg)
+
+In the terminal window, just type this:
+
+```bash
+curl -sS http://pi.protocentral.com/pi.sh | sudo bash
+```
+
+This code will install all the required overlays, configuration and application files to get the Healthy Pi up and running.
+
+After the script reboots, you should be able to see the GUI display on the screen
+
+![GUI in Processing](extras/Images/gui_healthypi.png)
+
+##This completes the install!
+
+If the above script does not work for you, you can manually do the installation by following these steps:
 
 Setting up Raspberry Pi for UART Communication
 ----------------------------------------------
@@ -115,14 +133,12 @@ e. Finally, copy the "controlP5 & G4P" folders from HealthyPi/Processing/librari
 
 * If any error occured in uploading the code, check for the internet connection and repeat the process.
 
-Connecting the Raspberry Pi to ProtoCentral's Healthy PI Hat
-------------------------------------------------------------
+Firmware:
+---------
 
-Mount ProtoCentral's Healthy PI Hat carefully onto the Raspberry Pi Board's GPIO Pins. And connect this setup with the Raspberry Pi's Display or HDMI Monitor. The Hat communicate with Raspberry Pi using UART interface. Connect the ECG electrodes and SPO2 Probe to the ProtoCentral's Healthy PI Hat.
+The board is pre-loaded with the firmware which works stand alone with the Rpi without any firmware development or loading required. 
 
-Now you have your own patient monitor with the help of Raspberry PI and ProtoCentral's Helathy PI Hat.
-
-![GUI in Processing](https://github.com/Protocentral/HealthyPi/blob/master/extras/Images/gui_healthypi.png)
+However, if you want to edit the firmware, you can follow the steps in this [document] (/docs/recompiling-firmware.md)
 
 
 License Information
