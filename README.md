@@ -9,6 +9,8 @@ This is a one-of-a-kind, all-in-one HAT for your Raspberry Pi 2 /3 computer. Jus
 
 You can buy [HealthyPi at ProtoCentral](https://www.protocentral.com/healthypi)
 
+![Healthy Pi Hat](https://github.com/Protocentral/HealthyPi/blob/master/extras/Images/healthypi.jpg)
+
 Repository Contents
 -------------------
 * **/firmware** - Atmel studio  and example sketches.
@@ -17,12 +19,8 @@ Repository Contents
 * **/gui** - HealthyPi GUI for Raspberry Pi and PC
 * **/docs** - Additional Documentation
 
-Board Overview
---------------
-![Healthy Pi Hat](https://github.com/Protocentral/HealthyPi/blob/master/extras/Images/healthypi.jpg)
-
-Getting Started:
----------------
+Getting Started with the Healthy Pi:
+------------------------------------
 
 Mount ProtoCentral's Healthy PI Hat carefully onto the Raspberry Pi Board's GPIO Pins. And connect this setup with the Raspberry Pi's Display or HDMI Monitor. The Hat communicate with Raspberry Pi using UART interface. Connect the ECG electrodes and SPO2 Probe to the ProtoCentral's Healthy PI Hat.
 
@@ -32,11 +30,13 @@ To start, open up the terminal window (Menu -> Accessories -> Terminal) on Raspb
 
 ![Open the terminal](extras/Images/terminal.jpg)
 
-In the terminal window, just type this:
+In the terminal window, type the following lines. 
 
 ```bash
 curl -sS http://pi.protocentral.com/pi.sh | sudo bash
 ```
+
+It really is as simple as that !!
 
 This code will install all the required overlays, configuration and application files to get the Healthy Pi up and running.
 
