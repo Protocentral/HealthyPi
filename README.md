@@ -1,7 +1,7 @@
 ProtoCentral HealthyPi HAT for Raspberry Pi
 ==========
 
-![Wave Form in Processing using Raspberry Pi](https://github.com/Protocentral/HealthyPi/blob/master/extras/Images/rpi_healthypi.jpg)
+![Wave Form in Processing using Raspberry Pi](docs/images/healthypi-run.jpg)
 
 This HAT for Raspberry Pi 3 / 2 includes vital patient monitoring including ECG, respiration, pulse oximetry and features options to add blood pressure and body temperature sensing.
 
@@ -9,7 +9,7 @@ This is a one-of-a-kind, all-in-one HAT for your Raspberry Pi 2 /3 computer. Jus
 
 You can buy [HealthyPi at ProtoCentral](https://www.protocentral.com/healthypi)
 
-![Healthy Pi Hat](https://github.com/Protocentral/HealthyPi/blob/master/extras/Images/healthypi.jpg)
+![Healthy Pi Hat](docs/images/healthypi-hat.jpg)
 
 Repository Contents
 -------------------
@@ -28,7 +28,7 @@ It's now easy to get started with our brand-new installation script. Just follow
 
 To start, open up the terminal window (Menu -> Accessories -> Terminal) on Raspbian running on your Raspberry Pi:
 
-![Open the terminal](extras/Images/terminal.jpg)
+![Open the terminal](docs/images/terminal.jpg)
 
 In the terminal window, type the following lines. 
 
@@ -42,7 +42,7 @@ This code will install all the required overlays, configuration and application 
 
 After the script reboots, you should be able to see the GUI display on the screen
 
-![GUI in Processing](extras/Images/gui_healthypi.png)
+![GUI in Processing](docs/images/healthypi-screen.png)
 
 ##This completes the install!
 
