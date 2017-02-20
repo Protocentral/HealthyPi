@@ -48,6 +48,21 @@ After the script reboots, you should be able to see the GUI display on the scree
 
 If the above script does not work for you and would like to do a manual installation or would like to customize the code, check out [Advanced HealthyPi] (/docs/advanced-healthypi.md).
 
+Connecting the ECG Electrodes
+------------------------------
+ A 3-electrode cable along with a standard stereo jack is provided along with the shield to connect the electrodes to the  board. The e
+ ![ConnectingTheElectrodes](extras/plugin.jpg)
+
+ The other side of the electrode connector would connect to snap-on electrodes attached to the body. For testing purposes,    you can use an ECG simulator to provide inputs to the board. 
+
+ Warning:
+ When connecting the electodes to the body, it is safer to disconnect the mains power source to the Arduino. For example, if  you are using the Arduino along with a laptop, disconnecting the battery charger from the laptop would be a safe option.
+ 
+Placing the Electrodes on the body
+---------------------------------
+![Wearing the Electrode](docs/images/connecting electrodes.png)
+
+
 License Information
 ===================
 
