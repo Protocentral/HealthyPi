@@ -1,5 +1,4 @@
 # ProtoCentral HealthyPi HAT for Raspberry Pi
-==========
 
 ![Healthy Pi Hat](docs/images/healthypi-hat.jpg)
 
