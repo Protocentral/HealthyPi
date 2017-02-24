@@ -1,9 +1,11 @@
 Recompiling Firmware:
 ---------------------
 
-The board is pre-loaded with the firmware which works stand alone with the Raspberry Pi with no embedded formware setup. 
+All boards shipped on or after February 20, 2017 come **pre-installed** with the Arduino Zero/M0 bootloader and the Arduino-based code. This means that you no longer need a JTAG programmer or Atmel Studio to customize the code on the SAMD21 microcontroller on the board. 
 
-However, if you would like to edit the firmware, here's the steps:
+In addition, the new Arduino-based firmware now **streams over USB** the same data sent to the Raspberry Pi's UART pins. This now means that the HealthyPi works not just with a Raspberry Pi, but any Windows/MAC/Linux machine that supports Java and Processing.
+ 
+However, if you would like to edit the firmware, here's the steps to do that in Atmel Studio 7:
 
 * **Atmel Studio 7** :
 Please note that Atmel Studio 7 is available only for Windows and does not support Mac and Linux . This is the IDE software that can do step & memory debugging and its only for Windows. Also you have to make an account on Atmel's site. The IDE can be downloaded from [Atmel Studio's Official Website](http://www.atmel.com/tools/atmelstudio.aspx)

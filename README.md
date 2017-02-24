@@ -1,15 +1,17 @@
-ProtoCentral HealthyPi HAT for Raspberry Pi
+# ProtoCentral HealthyPi HAT for Raspberry Pi
 ==========
 
-![Wave Form in Processing using Raspberry Pi](docs/images/healthypi-run.jpg)
+![Healthy Pi Hat](docs/images/healthypi-hat.jpg)
 
 This HAT for Raspberry Pi 3 / 2 includes vital patient monitoring including ECG, respiration, pulse oximetry and features options to add blood pressure and body temperature sensing.
 
 This is a one-of-a-kind, all-in-one HAT for your Raspberry Pi 2 /3 computer. Just plug it into the Raspberry Pi, install the graphical visualisation software and start using. Unlike available shields and breakouts that we carry for Arduino, this board combines all the functions into a a single board.
 
-You can buy [HealthyPi at ProtoCentral](https://www.protocentral.com/healthypi)
+###NEW
 
-![Healthy Pi Hat](docs/images/healthypi-hat.jpg)
+HealthyPi is no longer only for Raspberry Pi. All HealthyPi boards shipped on or after February 20, 2017 come **pre-installed with the Arduino Zero bootloader** and can be programmed with the Arduino IDE and used with any computer that supports Java. 
+
+If you dont already have one, you can buy [HealthyPi at ProtoCentral](https://www.protocentral.com/healthypi)
 
 Repository Contents
 -------------------
@@ -19,8 +21,8 @@ Repository Contents
 * **/gui** - HealthyPi GUI for Raspberry Pi and PC
 * **/docs** - Additional Documentation
 
-Getting Started with the Healthy Pi:
-------------------------------------
+Getting Started (On Raspberry Pi):
+----------------------------------
 
 Mount ProtoCentral's Healthy PI Hat carefully onto the Raspberry Pi Board's GPIO Pins. And connect this setup with the Raspberry Pi's Display or HDMI Monitor. The Hat communicate with Raspberry Pi using UART interface. Connect the ECG electrodes and SPO2 Probe to the ProtoCentral's Healthy PI Hat.
 
@@ -44,9 +46,42 @@ After the script reboots, you should be able to see the GUI display on the scree
 
 ![GUI in Processing](docs/images/healthypi-screen.png)
 
-##This completes the install!
+###This completes the install!
 
 If the above script does not work for you and would like to do a manual installation or would like to customize the code, check out [Advanced HealthyPi] (/docs/advanced-healthypi.md).
+
+Using the HealthyPi GUI on Windows, MacOS and Linux
+---------------------------------------------------
+The HealthyPi board now streams the same data on the on-board USB port. This allows you to get the same data that goes to the Raspberry Pi, now on your desktop PC as well. 
+
+Java 8 is required on all platforms for running the processing-based GUI application. You can download Java for your platform from the following link.
+
+[https://java.com/en/download/](https://java.com/en/download/)
+
+#### Installing drivers (only for Windows)
+
+HealthyPi uses the same drivers as an Arduino Zero. Once plugged in to the USB port, the device would be recognized as an "Unknown Device". You can locate the device is the Windows Device Manager and manually install the drivers provided in the "drivers" folder in the Windows Executable ZIP archive provided.
+
+MacOS and Linux do not need any drivers to be installed.
+
+### Processing GUI Installation
+
+Download the zip file containing the executable files from the following links for 32-bit/64-bit Windows. If you do not know if you have a 64-bit or 32-bit computer, please download the 32-bit version.
+
+* [Windows 32-bit Executable (ZIP)](https://github.com/Protocentral/HealthyPi/releases/download/v0.2/healthypi_gui_win32.zip)
+* [Windows 64-bit Executable (ZIP)](https://github.com/Protocentral/HealthyPi/releases/download/v0.2/healthypi_gui_win64.zip)
+* [MacOS Executable (ZIP)](https://github.com/Protocentral/HealthyPi/releases/download/v0.2/healthypi_gui_macos.zip)
+* [Linux 32-bit Executable (ZIP)](https://github.com/Protocentral/HealthyPi/releases/download/v0.2/healthypi_gui_linux32.zip)
+* [Linux 64-bit Executable (ZIP)](https://github.com/Protocentral/HealthyPi/releases/download/v0.2/healthypi_gui_linux64.zip)
+
+Simply download the appropriate file for your operating system, unzip the contents and run the executable program contained in it. 
+
+Programming the on-board SAMD21 microcontroller
+--------------------------------------------------
+
+HealthyPi now supports programming using Arduino ! 
+
+If you wish to program your own code on the HealthyPi board, check out [Modifying and recompiling HealthyPi Firmware](/docs/recompiling-firmware.md).
 
 Connecting the ECG Electrodes
 ------------------------------
@@ -70,6 +105,7 @@ Hardware
 ---------
 
 **All hardware is released under [Creative Commons Share-alike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/).**
+
 ![CC-BY-SA-4.0](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)
 
 Software
