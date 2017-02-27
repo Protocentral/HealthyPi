@@ -15,7 +15,7 @@ class Graph
   int xPos, yPos;                                            // location of the top left corner of the graph  
   int Width, Height;                                         // Width and height of the graph
   color GraphColor;                                        // Color for the trace
-  float yMax1=1024, yMin1=0;                                 // Default axis dimensions
+  float yMax1=10, yMin1=-10;                                 // Default axis dimensions
   float xMax1=10, xMin1=0;
   PFont Font;                                              // Selected font used for text 
 
