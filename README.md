@@ -14,7 +14,7 @@ If you dont already have one, you can buy [HealthyPi at ProtoCentral](https://ww
 
 Repository Contents
 -------------------
-* **/firmware** - Atmel studio  and example sketches.
+* **/firmware** - Atmel studio  and aduino example sketches.
 * **/Hardware** - All Eagle design files (.brd, .sch)
 * **/extras** - includes the datasheet
 * **/gui** - HealthyPi GUI for Raspberry Pi and PC
