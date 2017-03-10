@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/Protocentral/HealthyPi.png?label=ready&title=Ready)](https://waffle.io/Protocentral/HealthyPi)
 # ProtoCentral HealthyPi HAT for Raspberry Pi
 
 ![Healthy Pi Hat](docs/images/healthypi-hat.jpg)
