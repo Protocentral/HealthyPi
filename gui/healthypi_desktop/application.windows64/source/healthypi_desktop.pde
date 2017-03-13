@@ -208,7 +208,7 @@ public void draw()
   GPointsArray pointsPPG = new GPointsArray(nPoints1);
   GPointsArray pointsECG = new GPointsArray(nPoints1);
   GPointsArray pointsResp = new GPointsArray(nPoints1);
- //<>//
+
   if (startPlot)                             // If the condition is true, then the plotting is done
   {
     for(int i=0; i<nPoints1;i++)
