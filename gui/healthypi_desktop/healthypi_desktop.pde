@@ -11,6 +11,7 @@
 
 import g4p_controls.*;                       // Processing GUI Library to create buttons, dropdown,etc.,
 import processing.serial.*;                  // Serial Library
+import grafica.*;
 
 // Java Swing Package For prompting message
 import java.awt.*;
@@ -91,6 +92,13 @@ double ecg, resp, spo2_ir, spo2_red, spo2, redAvg, irAvg, ecgAvg, resAvg;  // To
 double respirationVoltage=20;                          // To store the current respiration value
 boolean startPlot = false;                             // Conditional Variable to start and stop the plot
 
+GPlot plot;
+int step = 0;
+int stepsPerCycle = 100;
+int lastStepTime = 0;
+boolean clockwise = true;
+float scale = 5;
+
 /************** File Related Variables **********************/
 
 boolean logging = false;                                // Variable to check whether to record the data or not
@@ -122,18 +130,38 @@ boolean gStatus;                                        // Boolean variable to s
 ///////////////////////////////////////////////////////////////////////////////
 
 public void setup() {
-  size(800, 480, JAVA2D);
-
+  //size(800, 480, JAVA2D);
+  fullScreen();
   /* G4P created Methods */
   createGUI();
   customGUI();
+  
+  //akw gplot start
+  plot = new GPlot(this);
+  plot.setPos(25, 25);
+  plot.setDim(1000, 300);
+
+// Prepare the first set of points
+  int nPoints1 = stepsPerCycle/10;
+  GPointsArray points1 = new GPointsArray(nPoints1);
+
+  for (int i = 0; i < nPoints1; i++) {
+    points1.add(calculatePoint(step, stepsPerCycle, scale));
+    step = (clockwise)? step + 1 : step - 1;
+  }
+    // Add the two set of points to the plot
+  plot.setPoints(points1);
+
+  //akw gplot end
 
   /* Object initialization for User-defined classes */
   headerButton = new HeaderButton(0, 0, width, 50);
   helpWidget = new HelpWidget(0, height - 50, width, 68); 
-  g = new Graph(12, 60, width-225, 100);
-  g1 = new Graph(10, 330, width-220, 100);
-  g2 = new Graph(10, 200, width-220, 100);
+  g = new Graph(12, 50, width-225, (height/3));
+  g2 = new Graph(10, 50+(height/3), width-300, (height/3));
+  g1 = new Graph(10, 50+(height*2/3), width-300, (height/3));
+  
+  println(height);
   hr = new BPM();
   rpm1 = new RPM();
   s = new SPO2_cal();
@@ -167,6 +195,40 @@ public void setup() {
 
 public void draw() {
   background(0);
+/* akw gplot start*/
+  plot.beginDraw();
+  plot.drawBackground();
+  plot.drawBox();
+  plot.drawXAxis();
+  plot.drawYAxis();
+  plot.drawTopAxis();
+  plot.drawRightAxis();
+  plot.drawTitle();
+  plot.getMainLayer().drawPoints();
+  plot.endDraw();
+
+  // Add and remove new points every 10th of a second
+  if (millis() - lastStepTime > 1) {
+    if (clockwise) {
+      // Add the point at the end of the array
+      plot.addPoint(calculatePoint(step, stepsPerCycle, scale));
+      step++;
+
+      // Remove the first point
+      plot.removePoint(0);
+    }
+    else {
+      // Add the point at the beginning of the array
+      plot.addPoint(0, calculatePoint(step, stepsPerCycle, scale));
+      step--;
+
+      // Remove the last point
+      plot.removePoint(plot.getPointsRef().getNPoints() - 1);
+    }
+
+    lastStepTime = millis();
+  }
+  /* akw gplot end*/
 
   g.DrawAxis();                              // Draw the grid for the graph
 
@@ -188,11 +250,11 @@ public void draw() {
 
   stroke(255);
   strokeWeight(2);
-  line(595, 0, 595, height-40);
-  line(595, 130, width, 130);
-  line(595, 210, width, 210);
-  line(595, 305, width, 305);
-  line(695, 305, 695, height-40);
+  line(width-300, 0,width-300, height-40);
+  line(width-300, (height/3)+(height/3), width, (height/3)+(height/3));
+  line(width-300, (height/3), width, (height/3));
+  line(width-300, (height/3)-(height/3), width, (height/3)-(height/3));
+  line(width-150, 305, width-150, height-40);
 
   // User-defined Class call
   headerButton.draw();
@@ -381,7 +443,7 @@ void ecsProcessData(char rxch)
         mins = min(spo2data);
 
         // Auto Scaling
-
+        /*
         if ((maxe != g.yMax1))
           g.yMax1 = (int)maxe;
         if ((maxr != g1.yMax1))
@@ -395,6 +457,7 @@ void ecsProcessData(char rxch)
           g1.yMin1 = (int)minr;
         if ((mins != g2.yMin1))
           g2.yMin1 = (int)mins;
+          */
 
         // If record button is clicked, then logging is done
 
@@ -465,7 +528,8 @@ void setChartSettings() {
 //
 //////////////////////////////////////////////////////////////////////////////
 
-public void customGUI() {  
+public void customGUI() 
+{  
   comList = port.list();
   String comList1[] = new String[comList.length+1];
   comList1[0] = "SELECT THE PORT";
@@ -527,4 +591,10 @@ double averageValue(float dataArray[])
     total = total + dataArray[i];
   }
   return total/dataArray.length;
+}
+
+GPoint calculatePoint(float i, float n, float rad) {
+  float delta = 0.1*cos(TWO_PI*10*i/n);
+  float ang = TWO_PI*i/n;
+  return new GPoint(rad*(1 + delta)*sin(ang), rad*(1 + delta)*cos(ang));
 }
