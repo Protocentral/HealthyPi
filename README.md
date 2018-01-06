@@ -93,7 +93,8 @@ Connecting the ECG Electrodes
  
 Placing the Electrodes on the body
 ---------------------------------
-![Wearing the Electrode](docs/images/connecting electrodes.png)
+
+![Wearing the Electrode](docs/images/connecting%20electrodes.png)
 
 
 License Information
