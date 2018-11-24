@@ -1,4 +1,7 @@
-[![Stories in Ready](https://badge.waffle.io/Protocentral/HealthyPi.png?label=ready&title=Ready)](https://waffle.io/Protocentral/HealthyPi)
+# This repository is OBSOLETE. Please visit https://github.com/Protocentral/protocentral-healthypi-v3 for the current version. 
+
+
+
 # ProtoCentral HealthyPi HAT for Raspberry Pi
 
 ![Healthy Pi Hat](docs/images/healthypi-hat.jpg)
@@ -7,11 +10,7 @@ This HAT for Raspberry Pi 3 / 2 includes vital patient monitoring including ECG,
 
 This is a one-of-a-kind, all-in-one HAT for your Raspberry Pi 2 /3 computer. Just plug it into the Raspberry Pi, install the graphical visualisation software and start using. Unlike available shields and breakouts that we carry for Arduino, this board combines all the functions into a a single board.
 
-###NEW
 
-HealthyPi is no longer only for Raspberry Pi. All HealthyPi boards shipped on or after February 20, 2017 come **pre-installed with the Arduino Zero bootloader** and can be programmed with the Arduino IDE and used with any computer that supports Java. 
-
-If you dont already have one, you can buy [HealthyPi at ProtoCentral](https://www.protocentral.com/healthypi)
 
 Repository Contents
 -------------------
