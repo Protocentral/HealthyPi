@@ -45,7 +45,7 @@ After the script reboots, you should be able to see the GUI display on the scree
 
 ![GUI in Processing](docs/images/healthypi-screen.png)
 
-###This completes the install!
+### This completes the install!
 
 If the above script does not work for you and would like to do a manual installation or would like to customize the code, check out [Advanced HealthyPi] (/docs/advanced-healthypi.md).
 
